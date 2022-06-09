@@ -5,11 +5,11 @@
   <property name="JC222" value="ext/java_card_kit-2_2_2"/>
   
   <!-- ant-javacard task from javacard.pro -->
-  <taskdef name="javacard" classname="pro.javacard.ant.JavaCard" classpath="ext/ant-javacard.jar"/>
+  <taskdef name="javacard" classname="pro.javacard.ant.JavaCard" classpath="../.upload/ant-javacard.jar"/>
 
   <target name="build" description="Builds the CAP file with LogApplet">
     <javacard jckit="${JC222}">
-      <cap output="!uploader/LogApplet.cap" sources="../LogApplet/src/" aid="73696d706c66">
+      <cap output="../.upload/LogApplet.cap" sources="../LogApplet/src/" aid="73696d706c66">
         <applet class="logapplet.LogApplet" aid="73696d706c666170706c6575"/>
       </cap>
     </javacard>

@@ -209,10 +209,6 @@ public class ControlService {
         }   
     }
     
-    public void changeLog() {
-        
-    }
-    
     private void getCardSize(CardManager cardMngr) throws Exception {
         ResponseAPDU response = cardMngr.transmit(new CommandAPDU(CLA_LOGAPPLET, INS_SEND_LOG_LEN, 0x00, 0x00));
         byte[] data = response.getData();
